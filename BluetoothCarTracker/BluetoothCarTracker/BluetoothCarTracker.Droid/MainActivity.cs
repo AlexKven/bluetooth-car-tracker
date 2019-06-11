@@ -13,6 +13,16 @@ namespace BluetoothCarTracker.Droid
         )]
     public class MainActivity : Windows.UI.Xaml.ApplicationActivity
     {
+        Services.BluetoothFragment Fragment { get; set; }
+
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+            var tx = FragmentManager.BeginTransaction();
+            Fragment = new Services.BluetoothFragment();
+            tx.Replace(Android.Resource.Id.Content, Fragment);
+            tx.Commit();
+        }
     }
 }
 

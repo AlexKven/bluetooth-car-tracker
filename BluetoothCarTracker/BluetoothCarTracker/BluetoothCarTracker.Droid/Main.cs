@@ -30,6 +30,8 @@ namespace BluetoothCarTracker.Droid
 
         private void ConfigureUniversalImageLoader()
         {
+
+
             // Create global configuration and initialize ImageLoader with this config
             ImageLoaderConfiguration config = new ImageLoaderConfiguration
                 .Builder(Context)
